@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country-web</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <header>Country Explorer</header>
+    <main>
+        <section class="top-section">
+            <div class="div-search">
+                <input type="text" id="country-input" name="country" value="" placeholder="Enter country here">
+                <button class="search-btn" id="search-btn">Search</button>
+            </div>
+            <div class="div-fav">
+                <button class="fav-btn" id="fav-btn">Add Fav</button>
+                <p class="store-fav" id="store-fav"></p>
+            </div>
+        </section>
+        
+        <section class="data">
+            <div class="loading" id="loading">loading...</div>
+            <div class="error" id="error">error</div>
+            <div class="country-data" id="country-data">
+
+            </div>
+            <div id="map">
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>
