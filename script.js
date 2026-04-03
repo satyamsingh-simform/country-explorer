@@ -54,7 +54,7 @@ async function fetchCountry(name){
 
         countryDetails.innerHTML = `
             <div class="card">
-                <div class="top">
+                <div class="flag-top">
                     <img class="flag" src="${country.flags.svg}" alt="flag"/>
                     <div>
                         <h2>${country.name.common}</h2>
@@ -71,7 +71,7 @@ async function fetchCountry(name){
                     <p><strong>Timezones:</strong> ${timezones}</p>
                 </div>
 
-                <div class="extra">
+                <div class="extra-info">
                     <img class="coat" src="${country.coatOfArms.svg}" alt="coat"/>
                     <a href="${country.maps.googleMaps}" target="_blank">View on Google Maps</a>
                 </div>
@@ -156,5 +156,4 @@ window.addEventListener('DOMContentLoaded',loadFavorites)
 
 
 
-// console.log([...favCountry]);
 
