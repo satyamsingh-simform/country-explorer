@@ -81,8 +81,10 @@ async function fetchCountry(name){
 
     }
     catch(err){
-        error.classList.remove('error');
-        error.innerText=err.message || `failed to load data`;
+        console.log(error.innerText=err.message || `failed to load data`);
+        // error.classList.remove('error');
+        // // countryDetails.innerHTML ='';
+        // error.innerText=err.message || `failed to load data`;
     }
     finally{
         loader.classList.add('loading');
@@ -120,6 +122,7 @@ function addFavourite(country){
     console.log('fav-after-check',fav);
     
     localStorage.setItem('favorites',JSON.stringify(fav));
+    loadFavorites();
     console.log('fav-data-after set',JSON.parse(localStorage.getItem('favorites')));
 }
 
