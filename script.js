@@ -89,11 +89,18 @@ async function fetchCountry(name){
     }
 }
 
-// fetchCountry('India');
+fetchCountry('India');
 
-
+let countryName;
+function sameSearchTwice(){
+    if(countryName==searchInput.value.trim()){
+        console.log('same country name');
+        throw new Error('same country');
+    }
+}
 searchBtn.addEventListener('click',()=>{
-    let countryName=searchInput.value.trim();
+    sameSearchTwice();
+    countryName=searchInput.value.trim();
     if(!countryName) return ;
     fetchCountry(countryName);
 })
@@ -137,9 +144,16 @@ function loadFavorites(){
     let favCountryArr=[...favCountry];
     console.log(favCountryArr);
     
+    let sameData;
     favCountryArr.forEach((data,index)=>{
         data.addEventListener('click',()=>{
             console.log(data.innerText);
+            if(sameData===data.innerText){
+                console.log('same country');
+                
+                return;
+            }
+            sameData=data.innerText;
             fetchCountry(data.innerText);
         })
     })

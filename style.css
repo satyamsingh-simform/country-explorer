@@ -19,7 +19,6 @@ main{
     min-height: 90vh;
     width: 80%;
     margin: 0 auto;
-    /* border: 1px solid salmon; */
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -58,7 +57,9 @@ main{
 
 #map{
     height: 400px;
-    border: 2px solid salmon;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 3px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
